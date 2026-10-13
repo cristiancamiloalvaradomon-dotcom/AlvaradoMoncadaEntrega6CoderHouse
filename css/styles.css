@@ -1,0 +1,239 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+    background-color: #EAF4FC !important; 
+    color: #2B3642; 
+}
+
+/* Títulos con mayor grosor */
+h1, h2, h3, h4 {
+    font-weight: bold; 
+    color: #0D47A1;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #E9EEF3;
+    padding: 20px;
+    gap: 20px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .menu {
+        flex-direction: column; 
+    }
+}
+
+
+.navbar-nav.menu .nav-link {
+    color: #0D47A1 !important;
+    background-color: #ffffff !important;
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    font-weight: bold !important; 
+}
+
+/* MAIN - PÁGINA DE INICIO (INDEX) */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    text-align: left;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.contenedor-inicio {
+    grid-template-areas:
+        "presentacion"
+        "eleccion"
+        "consulta";
+}
+
+/* MAIN - PÁGINA SOBRE NOSOTROS (HISTORIA) */
+.contenedor-historia {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.historia {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #F6F8FB;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.valores, .instalaciones {
+    background-color: #F6F8FB;
+    padding: 30px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+/* SECCIONES Y ARTÍCULOS */
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #F6F8FB;
+    border-radius: 12px;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* IMÁGENES */
+section img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+/* GALERÍA */
+.fotos-espacios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.fotos-espacios figure {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fotos-espacios img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.nav-link, .interactivo, .link-interactivo {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar: Hover y Focus */
+.navbar-nav.menu .nav-link:hover, 
+.navbar-nav.menu .nav-link:focus {
+    color: #ffffff !important;
+    background-color: #0D47A1 !important;
+    transform: scale(1.05); 
+    outline: none;
+}
+
+.navbar-nav.menu .nav-link:active {
+    transform: scale(0.95); 
+}
+
+/* Tarjetas y Carousel */
+.interactivo:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(13, 71, 161, 0.2); 
+}
+
+.interactivo:focus {
+    border: 2px solid #0D47A1;
+    outline: none;
+}
+
+.interactivo:active {
+    transform: scale(0.98);
+}
+
+/* Redes Sociales */
+.link-interactivo {
+    color: #0D47A1;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.link-interactivo:hover, .link-interactivo:focus {
+    color: #2B3642;
+    transform: scale(1.1) translateX(5px);
+}
+
+.link-interactivo:active {
+    color: #E9EEF3;
+    background-color: #0D47A1;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+
+footer {
+    background-color: #0D47A1; /* Color principal de la veterinaria */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 50px;
+    font-weight: bold; /* Letras gruesas para el footer */
+}
+
+footer p {
+    margin-bottom: 10px;
+    font-size: 20px; /* Tamaño un poco más grande */
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Forzar el color claro en los enlaces, incluso si tienen la clase .link-interactivo */
+footer a, 
+footer .link-interactivo {
+    color: #EAF4FC !important; 
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+footer a:hover, 
+footer .link-interactivo:hover {
+    color: #ffffff !important;
+}
+
+/*Ajuste general imagenes*/
+img {
+    max-width: 700px !important; 
+    width: 90% !important; 
+    height: auto !important; 
+    display: block !important; 
+    margin: 30px auto !important; 
+    border-radius: 10px; 
+}
